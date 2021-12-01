@@ -7,6 +7,7 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 import com.revrobotics.CANSparkMax;
@@ -31,7 +32,8 @@ public class ShooterSubsystem extends SubsystemBase {
     if (on == true) {
       m_flywheelController.set(Constants.kFlywheelSpeed);
       m_solenoidController.set(Value.kReverse);
-      
+      String solenoidval = m_solenoidController.getName();
+      SmartDashboard.putString("Solenoid Value", solenoidval);
     } else {
       m_flywheelController.set(0);
       m_solenoidController.set(Value.kForward);
