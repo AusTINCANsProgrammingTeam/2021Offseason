@@ -7,3 +7,5 @@ Tony
 Ariya
 
 testing 2
+
+Coding Conventions: https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
