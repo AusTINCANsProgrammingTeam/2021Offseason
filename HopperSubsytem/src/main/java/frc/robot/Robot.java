@@ -30,8 +30,10 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
-    m_hopperSubsystem = new HopperSubsystem();
-    m_hopperSubsystem.init();
+    //m_hopperSubsystem = new HopperSubsystem();
+
+   // m_hopperSubsystem.init();
+    
   }
 
   /**
@@ -87,7 +89,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     // m_hopperSubsystem.teleopIntakePeriodic(true);
-    
+    SmartDashboard.putString("Sol", "Sol");
   }
 
   @Override

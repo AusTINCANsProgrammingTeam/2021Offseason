@@ -8,13 +8,13 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 public class ShooterCommand extends CommandBase {
-  private ShooterSubsystem m_shoooterSubsystem;
+  private ShooterSubsystem m_shooterSubsystem;
   private boolean toggle = true;
   /** Creates a new CommandScheduler. */
   public ShooterCommand(ShooterSubsystem h) {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(h);
-    m_shoooterSubsystem = h;
+    m_shooterSubsystem = h;
   }
 
   // Called when the command is initially scheduled.
@@ -32,8 +32,8 @@ public class ShooterCommand extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_shoooterSubsystem.teleopShooterPeriodic(toggle);
-    
+    m_shooterSubsystem.teleopShooterPeriodic(toggle);
+    m_shooterSubsystem.teleopHoodPeriodic(toggle);
   }
 
   // Called once the command ends or is interrupted.

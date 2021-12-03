@@ -37,7 +37,7 @@ public class HopperSubsystem extends SubsystemBase {
   }
 
   
-  public void init() {
+  /** public void init() {
     m_motorController1 = new CANSparkMax(4, CANSparkMaxLowLevel.MotorType.kBrushless);
     m_motorController2 = new CANSparkMax(11, CANSparkMaxLowLevel.MotorType.kBrushless);
     m_motorController3 = new CANSparkMax(9, CANSparkMaxLowLevel.MotorType.kBrushless);
@@ -52,7 +52,7 @@ public class HopperSubsystem extends SubsystemBase {
     m_motorController3.setOpenLoopRampRate(Constants.kRampRate);
     m_motorController3.setSmartCurrentLimit(Constants.kCurrentLimit);
     m_motorController3.setInverted(true);
-  }
+  } */
   
   public void teleopIntakePeriodic(boolean on) {
     if (on == true) {
